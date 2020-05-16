@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
 
-import './components/TopBar'
+import './components/NavBar'
 //import './components/LaunchShips'
 //import { Launches } from './components/LaunchShips'
-import MiniDrawer from './components/TopBar';
+import ClippedDrawer from './components/NavBar';
 import BarChart from './components/LaunchShips';
 
 function App() {
   return (
     <div className ="App">
 
-      <MiniDrawer position = 'fixed'>
+      <ClippedDrawer position = 'fixed'>
 
-      </MiniDrawer>
+      </ClippedDrawer>
 
       <div className = "padding-app-drawer"></div>
 

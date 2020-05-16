@@ -13,3 +13,36 @@
   width: 100%;
   height: 100px;
 }
+
+
+.ProfileName h2{
+  font-size: 16px;
+  float: left;
+  margin-top: 50px;
+  margin-left: -30px;
+ 
+}
+
+.Profile {
+  margin-top: 40px;
+}
+
+.logo svg{
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin-top: 15px;
+  margin-left: 20%;
+  
+}
+
+.logo-text {
+  float: left;
+  margin-left: 50%;
+  margin-top: -58px;
+  font-size: 30px;
+  padding: 15px;
+}
+
