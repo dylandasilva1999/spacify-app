@@ -1,9 +1,15 @@
 .logo {
   font-family: 'pacificoregular';
 }
-
+/*
 .Launches {
   background-color: lightgray;
   width: 50%;
   height: 50vh;
+}
+*/
+
+.padding-app-drawer {
+  width: 100%;
+  height: 100px;
 }

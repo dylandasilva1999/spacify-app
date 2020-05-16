@@ -5,6 +5,7 @@ import './components/TopBar'
 //import './components/LaunchShips'
 //import { Launches } from './components/LaunchShips'
 import MiniDrawer from './components/TopBar';
+import BarChart from './components/LaunchShips';
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
 
       </MiniDrawer>
 
+      <div className = "padding-app-drawer"></div>
+
       <div className = "Launches">
-        <Launches />
+        <BarChart />
       </div>
 
     </div>
