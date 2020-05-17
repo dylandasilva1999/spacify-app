@@ -19,12 +19,37 @@
   font-size: 16px;
   float: left;
   margin-top: 50px;
-  margin-left: -30px;
- 
+  margin-left: -50px;
+  font-family: "proxima_novabold";
+  letter-spacing: 1px;
+  color: #CE2866;
+}
+
+.ProfileName h4{
+  font-size: 12px;
+  float: left;
+  margin-top: 0px;
+  margin-left: -50px;
+  font-family: "proxima_novaregular";
+  letter-spacing: 1px;
+  color: #333;
+  opacity: 0.5;
 }
 
 .Profile {
   margin-top: 40px;
+  margin-left: 5%;
+}
+
+#profile-image {
+  border: 3px solid #CE2866;
+  box-shadow: 0px 0px 10px 5px rgba(206, 40, 102, .2);
+  border-radius: 50%;
+}
+
+#profile-img:hover {
+  transform: scale(1.2);
+  background-color: #CE2866;
 }
 
 .logo svg{
@@ -46,3 +71,24 @@
   padding: 15px;
 }
 
+.Search-Icon {
+  margin-left: 0%;
+  width: 30px;
+  margin-left: 3%;
+}
+
+.Search-Input {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 13%;
+  padding-left: 5px;
+  margin-left: 35%;
+  border-radius: 25px;
+}
+
+.Notification-Icons {
+  margin-left: 20%;
+}
+
+.Search {
+  margin-left: -40px;
+}
