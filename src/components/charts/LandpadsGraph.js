@@ -136,7 +136,8 @@ class BarChart extends React.Component {
           enabled: false
         },
         xaxis: {
-          categories: [landPadName],
+          categories: [landPadName[0], landPadName[1], landPadName[2], landPadName[3], landPadName[4],
+          landPadName[5], landPadName[6]]
         }
       },
     
