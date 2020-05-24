@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactApexChart from "react-apexcharts";
+const launches = require('../dummydata/launches')
 
 class BarChart extends React.Component {
     constructor(props) {
