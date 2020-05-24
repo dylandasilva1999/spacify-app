@@ -28,7 +28,7 @@ function getShipData(buildYear, weight, name) {
 let shipFilterData = getShipData();
 const [yearBuilt, shipWeight, shipName] = getShipData();
 
-class BarChart extends React.Component {
+class ColumnChart extends React.Component {
   constructor(props) {
     super(props);
 
@@ -112,4 +112,4 @@ class BarChart extends React.Component {
     }
 }
 
-export default BarChart;
+export default ColumnChart;
