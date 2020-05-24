@@ -92,3 +92,47 @@
 .Search {
   margin-left: -40px;
 }
+
+.right-side {
+  width: 500px;
+}
+
+.card-one {
+  float: left;
+}
+
+.card-two {
+  float: left;
+}
+
+.logo-missions {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #CE2866;
+  float: right;
+  margin-right: 5%;
+}
+
+.mission-info-container {
+  width: 60%;
+  margin-left: 5%;
+}
+
+.logo-launch {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #CE2866;
+  float: right;
+  margin-right: 5%;
+}
+
+.launch-info-container {
+  width: 60%;
+  margin-left: 5%;
+}
+
+.success-rate-container {
+  margin-top: 200px;
+}

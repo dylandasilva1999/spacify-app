@@ -5,7 +5,12 @@ import './components/NavBar'
 //import './components/LaunchShips'
 //import { Launches } from './components/LaunchShips'
 import ClippedDrawer from './components/NavBar';
-import BarChart from './components/LaunchShips';
+import BarChart from './components/charts/ShipsGraph';
+import TotalLaunches from './components/charts/TotalLaunchesCard';
+import TotalMissions from './components/charts/TotalMissionsCard';
+import FalconOne from './components/charts/LaunchSuccessRateLeft';
+import FalconNine from './components/charts/LaunchSuccessRateMiddle';
+import FalconHeavy from './components/charts/LaunchSuccessRateRight';
 
 function App() {
   return (
@@ -17,10 +22,34 @@ function App() {
 
       <div className = "padding-app-drawer"></div>
 
-      <div className = "Launches">
-        <BarChart />
+      <div className = "container-fluid top">
+        <div className = "row">
+          <div className = "Ships col-xl-8">
+            <BarChart />
+          </div>
+          <div className = "right-side col-xl-4">
+            <div className = "card-one col-xl-6">
+              <TotalLaunches />
+            </div>
+            <div className = "card-two col-xl-6">
+              <TotalMissions />
+            </div>
+            <div className="success-rate-container col-xl-12">
+              <div className="row">
+                <div className="left col-xl-4">
+                  <FalconOne />
+                </div>
+                <div className="middle col-xl-4">
+                  <FalconNine />
+                </div>
+                <div className="right col-xl-4">
+                  <FalconHeavy />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   );
 }
