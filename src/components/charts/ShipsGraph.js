@@ -45,6 +45,9 @@ class ColumnChart extends React.Component {
             click: function(chart, w, e) {
               // console.log(chart, w, e)
             }
+          },
+          toolbar: {
+            show: false
           }
         },
         plotOptions: {

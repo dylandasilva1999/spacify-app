@@ -140,7 +140,7 @@ class FalconOne extends React.Component {
 
     render() {
         return (
-            <div id="chart" className="">
+            <div id="chart" className="falcon-one">
                 <ReactApexChart options={this.state.options} series={this.state.series} type="radialBar" height={250} />
             </div>
         );
