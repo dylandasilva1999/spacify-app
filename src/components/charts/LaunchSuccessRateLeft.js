@@ -48,6 +48,7 @@ function getRocketSuccessRate() {
 //Getting access to the arrays within the getShipData() function
 let rocketSuccessRate = getRocketSuccessRate();
 const [falconOneSuccessRates, falconNineSuccessRates, falconHeavySuccessRates, rocketNameOne, rocketNameTwo, rocketNameThree] = getRocketSuccessRate();
+
 class FalconOne extends React.Component {
   constructor(props) {
     super(props);

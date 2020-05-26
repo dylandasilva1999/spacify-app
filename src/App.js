@@ -7,6 +7,7 @@ import './components/NavBar'
 import ResponsiveDrawer from './components/NavBar';
 import ColumnChart from './components/charts/ShipsGraph';
 import BarChart from './components/charts/LandpadsGraph';
+import LineChart from './components/charts/RocketLaunches';
 import TotalLaunches from './components/charts/TotalLaunchesCard';
 import TotalMissions from './components/charts/TotalMissionsCard';
 import FalconOne from './components/charts/LaunchSuccessRateLeft';
@@ -84,21 +85,23 @@ function App() {
 
         </Grid>
 
-        <div className = "container-fluid middle-container">
+        <Grid container spacing={3}>
 
-          <div className = "row">
+          <Grid item xs={4}>
 
-            <div className = "left-middle col-xl-6">
+            <BarChart />
 
-              <BarChart />
+          </Grid>
 
-            </div>
+          <Grid item xs={2} />
 
-            <div className = "right-middle col-xl-6"></div>
+          <Grid item xs={6}>
 
-          </div>
+            <LineChart />
 
-        </div>
+          </Grid>
+
+        </Grid>
 
       </main>
 
