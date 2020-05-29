@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactApexChart from "react-apexcharts";
 
 const rockets = require('../../dummydata/rockets');
@@ -6,33 +6,19 @@ const rockets = require('../../dummydata/rockets');
 //Function to assign the needed data to arrays to use in graphs
 function getRocketSuccessRate() {
 
-  var falconOneSuccessRates = [];
   var falconNineSuccessRates = [];
-  var falconHeavySuccessRates = [];
 
-  var rocketNameOne = "";
   var rocketNameTwo = "";
-  var rocketNameThree = "";
 
   var rocketData = rockets.rockets;
 
   for (let i = 0; i < rocketData.length; i++) {
 
-    if(rocketData[i].rocket_name == "Falcon 1") {
-
-      falconOneSuccessRates.push(rocketData[i].success_rate_pct);
-      rocketNameOne = rocketData[i].rocket_name;
-      
-    } else if (rocketData[i].rocket_name == "Falcon 9") {
+    if (rocketData[i].rocket_name === "Falcon 9") {
 
       falconNineSuccessRates.push(rocketData[i].success_rate_pct);
       rocketNameTwo = rocketData[i].rocket_name;
 
-    } else if (rocketData[i].rocket_name == "Falcon Heavy") {
-
-      falconHeavySuccessRates.push(rocketData[i].success_rate_pct);
-      rocketNameThree = rocketData[i].rocket_name;
-      
     } else {
 
       console.log("Rocket data does not exist");
@@ -41,13 +27,13 @@ function getRocketSuccessRate() {
 
   }
 
-  return [falconOneSuccessRates, falconNineSuccessRates, falconHeavySuccessRates, rocketNameOne, rocketNameTwo, rocketNameThree];
+  return [falconNineSuccessRates, rocketNameTwo];
 
 }
 
 //Getting access to the arrays within the getShipData() function
-let rocketSuccessRate = getRocketSuccessRate();
-const [falconOneSuccessRates, falconNineSuccessRates, falconHeavySuccessRates, rocketNameOne, rocketNameTwo, rocketNameThree] = getRocketSuccessRate();
+const [falconNineSuccessRates, rocketNameTwo] = getRocketSuccessRate();
+
 class FalconNine extends React.Component {
   constructor(props) {
     super(props);

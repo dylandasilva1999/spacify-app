@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
@@ -12,13 +11,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import ProfileImage from "../images/profile.jpg";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SettingsIcon from '@material-ui/icons/Settings';
-import ExploreIcon from '@material-ui/icons/Explore';
-import { blue } from '@material-ui/core/colors';
+import ExploreIcon from '@material-ui/icons/Explore'
 import SvgIcon from '@material-ui/core/SvgIcon';
 import { ReactComponent as Logo } from "../images/logo.svg";
 import DashboardIcon from '@material-ui/icons/Dashboard';
@@ -26,7 +23,7 @@ import PhonelinkLockIcon from '@material-ui/icons/PhonelinkLock';
 import HelpIcon from '@material-ui/icons/Help';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import PeopleIcon from '@material-ui/icons/People';
-import Grid from '@material-ui/core/Grid';
+//import Grid from '@material-ui/core/Grid';
 
 const drawerWidth = 260;
 

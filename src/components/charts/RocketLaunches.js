@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactApexChart from "react-apexcharts";
-import CardContent from '@material-ui/core/CardContent';
-import Card from '@material-ui/core/Card';
-import { makeStyles } from '@material-ui/core/styles';
 
 const rockets = require('../../dummydata/rockets');
 
@@ -21,17 +18,17 @@ function getRocketSuccessRate() {
 
   for (let i = 0; i < rocketData.length; i++) {
 
-    if(rocketData[i].rocket_name == "Falcon 1") {
+    if(rocketData[i].rocket_name === "Falcon 1") {
 
       falconOneSuccessRates.push(rocketData[i].success_rate_pct);
       rocketNameOne = rocketData[i].rocket_name;
       
-    } else if (rocketData[i].rocket_name == "Falcon 9") {
+    } else if (rocketData[i].rocket_name === "Falcon 9") {
 
       falconNineSuccessRates.push(rocketData[i].success_rate_pct);
       rocketNameTwo = rocketData[i].rocket_name;
 
-    } else if (rocketData[i].rocket_name == "Falcon Heavy") {
+    } else if (rocketData[i].rocket_name === "Falcon Heavy") {
 
       falconHeavySuccessRates.push(rocketData[i].success_rate_pct);
       rocketNameThree = rocketData[i].rocket_name;
@@ -49,7 +46,6 @@ function getRocketSuccessRate() {
 }
 
 //Getting access to the arrays within the getShipData() function
-let rocketSuccessRate = getRocketSuccessRate();
 const [falconOneSuccessRates, falconNineSuccessRates, falconHeavySuccessRates, rocketNameOne, rocketNameTwo, rocketNameThree] = getRocketSuccessRate();
 
 class LineChart extends React.Component {

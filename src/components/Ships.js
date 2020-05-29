@@ -1,4 +1,6 @@
-export const Launches = () => {
+import React, {useState, useEffect} from 'react';
+
+export const Ships = () => {
     const [loading, setLoading] = useState(true);
     const [launchesShips, setLaunchesShips] = useState([]);
 
@@ -14,7 +16,7 @@ export const Launches = () => {
                 setLoading(false);
             })
             .catch(err => {
-                console.log(`There was an error ${err}`);
+                console.log(`Fetch Failed ${err}`);
             });
     }, []);
     
@@ -36,3 +38,15 @@ export const Launches = () => {
     );
     
 };
+
+const ListLaunches = ({ launchesShips }) => {
+    return (
+        <ul>
+
+            {launchesShips => {
+                return <li>{launchesShips.year_built}</li>
+            }}
+
+        </ul>
+    )
+}

@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 
 import './components/NavBar'
-//import './components/LaunchShips'
-//import { Launches } from './components/LaunchShips'
+import './components/Ships'
+import {Ships} from './components/Ships'
 import ResponsiveDrawer from './components/NavBar';
 import ColumnChart from './components/charts/ShipsGraph';
 import BarChart from './components/charts/LandpadsGraph';
@@ -14,7 +14,7 @@ import FalconOne from './components/charts/LaunchSuccessRateLeft';
 import FalconNine from './components/charts/LaunchSuccessRateMiddle';
 import FalconHeavy from './components/charts/LaunchSuccessRateRight';
 
-import Container from '@material-ui/core/Container';
+//import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 function App() {
@@ -105,8 +105,9 @@ function App() {
 
       </main>
 
-    </div>
+      <Ships />
 
+    </div>
     
   );
 }

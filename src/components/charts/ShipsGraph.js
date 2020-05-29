@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactApexChart from "react-apexcharts";
 
 const ships = require('../../dummydata/ships');
@@ -25,7 +25,6 @@ function getShipData(buildYear, weight, name) {
 }
 
 //Getting access to the arrays within the getShipData() function
-let shipFilterData = getShipData();
 const [yearBuilt, shipWeight, shipName] = getShipData();
 
 class ColumnChart extends React.Component {

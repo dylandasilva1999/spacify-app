@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactApexChart from "react-apexcharts";
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core/styles';

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactApexChart from "react-apexcharts";
 
 const landpads = require('../../dummydata/landpads');
@@ -52,43 +52,43 @@ function getLandpadData() {
 
     landPadName.push(landpadData[i].full_name);
 
-    if(landpadData[i].full_name == "Landing Zone 1") {
+    if(landpadData[i].full_name === "Landing Zone 1") {
 
       slPadOne = landpadData[i].successful_landings;
       alPadOne = landpadData[i].attempted_landings;
       successRatePadOne = slPadOne/alPadOne * 100;
       
-    } else if (landpadData[i].full_name == "Landing Zone 2") {
+    } else if (landpadData[i].full_name === "Landing Zone 2") {
 
       slPadTwo = landpadData[i].successful_landings;
       alPadTwo = landpadData[i].attempted_landings;
       successRatePadTwo = slPadTwo/alPadTwo * 100;
 
-    } else if (landpadData[i].full_name == "Landing Zone 4") {
+    } else if (landpadData[i].full_name === "Landing Zone 4") {
 
       slPadThree = landpadData[i].successful_landings;
       alPadThree = landpadData[i].attempted_landings;
       successRatePadThree = slPadThree/alPadThree * 100;
       
-    } else if (landpadData[i].full_name == "Of Course I Still Love You") {
+    } else if (landpadData[i].full_name === "Of Course I Still Love You") {
 
       slPadFour = landpadData[i].successful_landings;
       alPadFour = landpadData[i].attempted_landings;
       successRatePadFour = slPadFour/alPadFour * 100;
       
-    } else if (landpadData[i].full_name == "Just Read The Instructions V1") {
+    } else if (landpadData[i].full_name === "Just Read The Instructions V1") {
 
       slPadFive = landpadData[i].successful_landings;
       alPadFive = landpadData[i].attempted_landings;
       successRatePadFive = slPadFive/alPadFive * 100;
       
-    } else if (landpadData[i].full_name == "Just Read The Instructions") {
+    } else if (landpadData[i].full_name === "Just Read The Instructions") {
 
       slPadSix = landpadData[i].successful_landings;
       alPadSix = landpadData[i].attempted_landings;
       successRatePadSix = slPadSix/alPadSix * 100;
       
-    } else if (landpadData[i].full_name == "A Shortfall of Gravitas") {
+    } else if (landpadData[i].full_name === "A Shortfall of Gravitas") {
 
       slPadSeven = landpadData[i].successful_landings;
       alPadSeven = landpadData[i].attempted_landings;
@@ -107,8 +107,7 @@ function getLandpadData() {
 
 }
 
-//Getting access to the arrays within the getShipData() function
-let shipFilterData = getLandpadData();
+//Getting access to the arrays within the getShipData() functio
 const [landPadName, successRatePadOne, successRatePadTwo, successRatePadThree, successRatePadFour, 
   successRatePadFive, successRatePadSix, successRatePadSeven] = getLandpadData();
 
