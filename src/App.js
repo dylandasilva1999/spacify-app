@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import './components/NavBar'
+import './components/layout/NavBar'
 import './components/Ships'
 import {Ships} from './components/Ships'
-import ResponsiveDrawer from './components/NavBar';
+import ResponsiveDrawer from './components/layout/NavBar';
 import ColumnChart from './components/charts/ShipsGraph';
-import BarChart from './components/charts/LandpadsGraph';
+import BarChart from './components/charts/LandPadsGraph';
 import LineChart from './components/charts/RocketLaunches';
 import TotalLaunches from './components/charts/TotalLaunchesCard';
 import TotalMissions from './components/charts/TotalMissionsCard';

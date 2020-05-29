@@ -4,7 +4,7 @@ import ReactApexChart from "react-apexcharts";
 const landpads = require('../../dummydata/landpads');
 
 //Function to assign the needed data to arrays to use in graphs
-function getLandpadData() {
+function getLandPadData() {
 
   //sl = successful landings
   //al = attempted landings
@@ -109,7 +109,7 @@ function getLandpadData() {
 
 //Getting access to the arrays within the getShipData() functio
 const [landPadName, successRatePadOne, successRatePadTwo, successRatePadThree, successRatePadFour, 
-  successRatePadFive, successRatePadSix, successRatePadSeven] = getLandpadData();
+  successRatePadFive, successRatePadSix, successRatePadSeven] = getLandPadData();
 
 class BarChart extends React.Component {
   constructor(props) {

@@ -35,7 +35,7 @@ function getRocketSuccessRate() {
       
     } else {
 
-      console.log("Rocket data does not exist");
+      //console.log("Rocket data does not exist");
 
     }
 

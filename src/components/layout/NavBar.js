@@ -12,12 +12,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import ProfileImage from "../images/profile.jpg";
+import ProfileImage from "../../images/profile.jpg";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ExploreIcon from '@material-ui/icons/Explore'
 import SvgIcon from '@material-ui/core/SvgIcon';
-import { ReactComponent as Logo } from "../images/logo.svg";
+import { ReactComponent as Logo } from "../../images/logo.svg";
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import PhonelinkLockIcon from '@material-ui/icons/PhonelinkLock';
 import HelpIcon from '@material-ui/icons/Help';

@@ -6,12 +6,12 @@ export const Ships = () => {
 
     useEffect(() => {
 
-        console.log("The Launches of the ships are being rendered");
-        fetch("https://api.spacexdata.com/v3/launches")
+        fetch("https://api.spacexdata.com/v3/ships")
             .then(response => {
                 return response.json();
             })
             .then(data => {
+                console.log(data);
                 setLaunchesShips(data);
                 setLoading(false);
             })
@@ -40,13 +40,12 @@ export const Ships = () => {
 };
 
 const ListLaunches = ({ launchesShips }) => {
+    
     return (
         <ul>
-
-            {launchesShips => {
+            {launchesShips.map(launchesShips => {
                 return <li>{launchesShips.year_built}</li>
-            }}
-
+            })}
         </ul>
     )
 }
