@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from 'react';
+//import ReactApexChart from "react-apexcharts";
+import '../components/Ships'
+//import ColumnChart from './charts/ShipsGraph';
 
 export const Ships = () => {
     const [loading, setLoading] = useState(true);
@@ -6,17 +9,27 @@ export const Ships = () => {
 
     useEffect(() => {
 
-        fetch("https://api.spacexdata.com/v3/ships")
+        fetch("https://api.spacexdata.com/v3/ships", {
+            method: 'POST',
+            mode: 'cors', 
+            cache: 'no-cache', 
+            credentials: 'same-origin', 
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            redirect: 'follow', 
+            referrerPolicy: 'no-referrer', 
+            })
             .then(response => {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
+                //console.log(data);
                 setLaunchesShips(data);
                 setLoading(false);
             })
-            .catch(err => {
-                console.log(`Fetch Failed ${err}`);
+            .catch(error => {
+                console.log(`Fetch Failed ${error}`);
             });
     }, []);
     
@@ -29,7 +42,7 @@ export const Ships = () => {
             <h1>Ship Launches</h1>
             {loading ? "Loading..." : ""}
             {launchesShips.length > 0 ? (
-                <ListLaunches launchesShips={launchesShips} />
+                <GetShipData launchesShips={launchesShips} />
             ) : (
                 "There are no ship Launches available"
             )}
@@ -39,13 +52,20 @@ export const Ships = () => {
     
 };
 
-const ListLaunches = ({ launchesShips }) => {
-    
-    return (
-        <ul>
-            {launchesShips.map(launchesShips => {
-                return <li>{launchesShips.year_built}</li>
-            })}
-        </ul>
-    )
+const GetShipData = function ({launchesShips}) {
+
+    let shipWeights = [];
+    let shipNames = [];
+    let yearBuilt = [];
+
+    for (let i = 0; i < launchesShips.length; i++) {
+        shipWeights.push(launchesShips[i].weight_kg);
+        shipNames.push(launchesShips[i].ship_name);
+        yearBuilt.push(launchesShips[i].year_built);
+    }
+
+    return [shipWeights, shipNames, yearBuilt];
+
 }
+
+

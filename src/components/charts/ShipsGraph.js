@@ -6,7 +6,6 @@ const ships = require('../../dummydata/ships');
 //Function to assign the needed data to arrays to use in graphs
 function getShipData(buildYear, weight, name) {
 
-  var yearBuilt = [];
   var shipWeight = [];
   var shipName = [];
 
@@ -14,18 +13,17 @@ function getShipData(buildYear, weight, name) {
 
   for (let i = 0; i < shipData.length; i++) {
 
-    yearBuilt.push(shipData[i].year_built);
     shipWeight.push(shipData[i].weight_kg);
     shipName.push(shipData[i].ship_name);
 
   }
 
-  return [yearBuilt, shipWeight, shipName];
+  return [shipWeight, shipName];
 
 }
 
 //Getting access to the arrays within the getShipData() function
-const [yearBuilt, shipWeight, shipName] = getShipData();
+const [shipWeight, shipName] = getShipData();
 
 class ColumnChart extends React.Component {
   constructor(props) {
