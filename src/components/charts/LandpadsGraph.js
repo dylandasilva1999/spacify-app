@@ -142,8 +142,48 @@ class BarChart extends React.Component {
           landPadName[5], landPadName[6]]
         },
         fill: {
-          colors: ['#CE2866', '#CE2866', '#CE2866']
-        }
+          colors: ['#CE2866', '#240F3E']
+        },
+        responsive: [
+          {
+            breakpoint: 1000,
+            options: {
+              plotOptions: {
+                bar: {
+                  horizontal: true
+                }
+              },
+              legend: {
+                position: "bottom"
+              },
+              xaxis: {
+                labels: {
+                  style: {
+                    fontSize: '12px'
+                  },
+                  show: false,
+                }
+              },
+              yaxis: {
+                show: false,
+              },
+              title: {
+                text: "Landing Pads Success Rates",
+                align: 'center',
+                margin: 10,
+                offsetX: 0,
+                offsetY: 0,
+                floating: false,
+                style: {
+                  fontSize:  '20px',
+                  fontWeight:  'bold',
+                  fontFamily: "proxima_novaregular",
+                  color:  '#263238'
+                },
+            },
+            }
+          }
+        ],
       },
     
     

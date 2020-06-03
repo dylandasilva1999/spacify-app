@@ -75,6 +75,7 @@ class LineChart extends React.Component {
             enabled: false
           },
         },
+        colors: ['#CE2866', '#240F3E', '#333'],
         dataLabels: {
           enabled: false
         },
@@ -82,7 +83,7 @@ class LineChart extends React.Component {
           width: [5, 7, 5],
           curve: 'smooth',
           dashArray: [0, 8, 5],
-          colors: ['#CE2866', '#CE2866', '#CE2866'],
+          colors: ['#CE2866', '#240F3E', '#333'],
         },
         title: {
           text: '',
@@ -97,7 +98,8 @@ class LineChart extends React.Component {
           size: 0,
           hover: {
             sizeOffset: 6
-          }
+          },
+          colors: ['#CE2866', '#240F3E', '#333']
         },
         xaxis: {
           categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',

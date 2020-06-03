@@ -87,17 +87,60 @@ class ColumnChart extends React.Component {
           labels: {
             style: {
               fontSize: '12px'
-            }
+            },
           }
         },
         yaxis: {
           title: {
             text: 'Weight (kg)'
-          }
+          },
         },
         fill: {
-          colors: ['#CE2866', '#CE2866', '#CE2866']
-        }
+          colors: ['#CE2866', '#240F3E']
+        },
+        responsive: [
+          {
+            breakpoint: 1000,
+            options: {
+              plotOptions: {
+                bar: {
+                  horizontal: false
+                }
+              },
+              legend: {
+                position: "bottom"
+              },
+              xaxis: {
+                labels: {
+                  style: {
+                    fontSize: '12px'
+                  },
+                  show: false,
+                }
+              },
+              yaxis: {
+                title: {
+                  text: 'Weight (kg)'
+                },
+                show: false,
+              },
+              title: {
+                text: "All Ships Weights(kg)",
+                align: 'center',
+                margin: 10,
+                offsetX: 0,
+                offsetY: 0,
+                floating: false,
+                style: {
+                  fontSize:  '20px',
+                  fontWeight:  'bold',
+                  fontFamily:  "proxima_novaregular",
+                  color:  '#263238'
+                },
+              },
+            }
+          }
+        ]
 
       },
     

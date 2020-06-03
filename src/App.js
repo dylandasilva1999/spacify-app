@@ -30,11 +30,13 @@ function App() {
       <Container maxWidth="xl">
         <Grid container spacing={1}>
 
-            <Grid item xs={12} xl={8} >
+            <Grid item xs={12} xl={7} >
 
               <ColumnChart />
               
             </Grid>
+
+            <Grid item xs={2} sm={12} xl={1} />
 
             <Grid item xs={12} sm={12} xl={4}>
 
