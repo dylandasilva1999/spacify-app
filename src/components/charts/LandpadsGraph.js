@@ -140,6 +140,9 @@ class BarChart extends React.Component {
         xaxis: {
           categories: [landPadName[0], landPadName[1], landPadName[2], landPadName[3], landPadName[4],
           landPadName[5], landPadName[6]]
+        },
+        fill: {
+          colors: ['#CE2866', '#CE2866', '#CE2866']
         }
       },
     

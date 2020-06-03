@@ -107,11 +107,22 @@ class FalconNine extends React.Component {
             shade: 'dark',
             type: 'horizontal',
             shadeIntensity: 0.5,
-            gradientToColors: ['#ABE5A1'],
+            gradientToColors: ['#CE2866'],
             inverseColors: true,
             opacityFrom: 1,
             opacityTo: 1,
-            stops: [0, 100]
+            colorStops: [
+              {
+                offset: 0,
+                color: "#CE2866",
+                opacity: 1
+              },
+              {
+                offset: 100,
+                color: "#240F3E",
+                opacity: 1
+              },
+            ]
           }
         },
         stroke: {

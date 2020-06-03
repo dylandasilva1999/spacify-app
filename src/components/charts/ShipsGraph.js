@@ -94,6 +94,9 @@ class ColumnChart extends React.Component {
           title: {
             text: 'Weight (kg)'
           }
+        },
+        fill: {
+          colors: ['#CE2866', '#CE2866', '#CE2866']
         }
 
       },

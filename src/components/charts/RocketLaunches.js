@@ -81,7 +81,8 @@ class LineChart extends React.Component {
         stroke: {
           width: [5, 7, 5],
           curve: 'smooth',
-          
+          dashArray: [0, 8, 5],
+          colors: ['#CE2866', '#CE2866', '#CE2866'],
         },
         title: {
           text: '',
