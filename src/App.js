@@ -5,7 +5,6 @@ import './components/layout/NavBar'
 import ResponsiveDrawer from './components/layout/NavBar';
 import {ColumnChart} from './components/charts/ShipsGraph';
 import {BarChart} from './components/charts/LandPadsGraph';
-import LineChart from './components/charts/RocketLaunches';
 import {TotalLaunches} from './components/charts/TotalLaunchesCard';
 import {TotalMissions} from './components/charts/TotalMissionsCard';
 import {FalconOne} from './components/charts/LaunchSuccessRateLeft';
@@ -108,7 +107,7 @@ function App() {
 
           <Grid item xs={12} xl={6}>
 
-            <LineChart />
+            
 
           </Grid>
 

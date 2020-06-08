@@ -18,7 +18,7 @@
 }
 
 .graphs-container {
-  
+
 }
 
 .top-bar {
@@ -249,7 +249,10 @@
     margin: 0 auto;
   }
   .landpad-graph {
-    margin-top: 60px;
+    margin-top: 50px;
+  }
+  .padding-app-drawer {
+    margin-top: 80px;
   }
   
 }
@@ -268,7 +271,7 @@
     margin-top: 40px;
   }
   .padding-app-drawer {
-    height: 20px;
+    margin-top: 80px;
   }
 }
 
