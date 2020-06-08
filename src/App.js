@@ -35,7 +35,7 @@ function App() {
 
       <main>
 
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className="graphs-container">
         <Grid container spacing={1}>
 
             <Grid item xs={12} xl={7} className="column-chart">
@@ -58,7 +58,7 @@ function App() {
 
                 </Grid>
 
-                <Grid item xs={1} sm={0} xl={0} />
+                <Grid item xs={1} sm={0} xl={2} />
 
                 <Grid item xs={12} sm={5} xl={5}>
 

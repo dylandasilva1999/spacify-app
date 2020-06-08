@@ -96,6 +96,19 @@ const chartConf = {
         show: false
       }
     },
+    title: {
+      text: "All Ships Weights(kg)",
+      align: 'left',
+      margin: 10,
+      offsetX: 0,
+      offsetY: 0,
+      floating: false,
+      style: {
+        fontSize:  '22px',
+        fontFamily:  "proxima_novabold",
+        color:  '#263238'
+      },
+    },
     plotOptions: {
       bar: {
         columnWidth: '60%',

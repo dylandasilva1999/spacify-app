@@ -55,6 +55,8 @@ export const BarChart = () => {
                     ...chartConf,
                     series: [{
                       data: landpads.landpads.map(landpad => landpad.attempted_landings)
+                    }, {
+                      data: landpads.landpads.map(landpad => landpad.successful_landings)
                     }],
                     options: {
                       xaxis: {
@@ -77,7 +79,7 @@ export const BarChart = () => {
 
     return (
         <div id="chart" className="landpad-graph">
-            <ReactApexChart options={chartData.options} series={chartData.series} type="bar" height={450} />
+            <ReactApexChart options={chartData.options} series={chartData.series} type="bar" height={470} />
         </div>
     );
 }
@@ -85,6 +87,10 @@ export const BarChart = () => {
 const chartConf = {
 
   series: [{
+    name: "Attempted",
+    data: []
+  }, {
+    name: "Successful",
     data: []
   }],
   options: {
@@ -95,13 +101,39 @@ const chartConf = {
         show: false
       }
     },
+    colors: ['#CE2866', '#240F3E'],
     title: {
-      show: false,
+      text: "Landing Pads Attempted vs Successful Landings",
+      align: 'left',
+      margin: 10,
+      offsetX: 0,
+      offsetY: 0,
+      floating: false,
+      style: {
+        fontSize:  '22px',
+        fontFamily:  "proxima_novabold",
+        color:  '#263238'
+      },
+    },
+    markers: {
+      size: 0,
+      hover: {
+        sizeOffset: 6
+      },
+      colors: ['#CE2866', '#240F3E']
     },
     plotOptions: {
       bar: {
         horizontal: true,
       }
+    },
+    legend: {
+      
+    },
+    stroke: {
+      show: true,
+      width: 0,
+      colors: ['#fff']
     },
     dataLabels: {
       enabled: false
@@ -136,7 +168,7 @@ const chartConf = {
             show: false,
           },
           title: {
-            text: "Landing Pads Success Rates",
+            text: "Landing Pads Attempted vs Successful Landings",
             align: 'center',
             margin: 10,
             offsetX: 0,
