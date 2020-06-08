@@ -2,17 +2,15 @@ import React from 'react';
 import './App.css';
 
 import './components/layout/NavBar'
-import './components/Ships'
-import {Ships} from './components/Ships'
 import ResponsiveDrawer from './components/layout/NavBar';
 import {ColumnChart} from './components/charts/ShipsGraph';
-import BarChart from './components/charts/LandPadsGraph';
+import {BarChart} from './components/charts/LandPadsGraph';
 import LineChart from './components/charts/RocketLaunches';
-import TotalLaunches from './components/charts/TotalLaunchesCard';
-import TotalMissions from './components/charts/TotalMissionsCard';
-import FalconOne from './components/charts/LaunchSuccessRateLeft';
-import FalconNine from './components/charts/LaunchSuccessRateMiddle';
-import FalconHeavy from './components/charts/LaunchSuccessRateRight';
+import {TotalLaunches} from './components/charts/TotalLaunchesCard';
+import {TotalMissions} from './components/charts/TotalMissionsCard';
+import {FalconOne} from './components/charts/LaunchSuccessRateLeft';
+import {FalconNine} from './components/charts/LaunchSuccessRateMiddle';
+import {FalconHeavy} from './components/charts/LaunchSuccessRateRight';
 
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -23,14 +21,24 @@ function App() {
 
       <ResponsiveDrawer position = 'fixed'></ResponsiveDrawer>
 
-      <div className = "padding-app-drawer"></div>
+      <div className = "padding-app-drawer">
+
+        <div className = "top-bar">
+
+            <div className = "icon"></div>
+            <h1>Greetings Spacifier!</h1>
+            <div className = "illustration"></div>
+
+        </div>
+
+      </div>
 
       <main>
 
       <Container maxWidth="xl">
         <Grid container spacing={1}>
 
-            <Grid item xs={12} xl={7} >
+            <Grid item xs={12} xl={7} className="column-chart">
 
               <ColumnChart />
               
@@ -109,8 +117,6 @@ function App() {
       </Container>  
 
       </main>
-
-      <Ships />
 
     </div>
     

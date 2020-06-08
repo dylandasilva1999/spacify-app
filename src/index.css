@@ -19,12 +19,7 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'pacificoregular';
-  src: url('./fonts/pacifico-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
   margin: 0;

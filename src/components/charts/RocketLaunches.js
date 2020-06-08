@@ -54,16 +54,17 @@ class LineChart extends React.Component {
 
     this.state = {
     
-      series: [{
-          name: rocketNameOne,
-          data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
-        },
+      series: [
         {
-          name: rocketNameTwo,
+          name: "Falcon 9",
           data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
         },
         {
-          name: rocketNameThree,
+          name: "Falcon Heavy",
+          data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+        },
+        {
+          name: "Starship",
           data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
         }
       ],
@@ -75,15 +76,15 @@ class LineChart extends React.Component {
             enabled: false
           },
         },
-        colors: ['#CE2866', '#240F3E', '#333'],
+        colors: ['#CE2866', '#240F3E', '#333', '#A9A9A9'],
         dataLabels: {
           enabled: false
         },
         stroke: {
-          width: [5, 7, 5],
+          width: [5, 7, 5, 7],
           curve: 'smooth',
-          dashArray: [0, 8, 5],
-          colors: ['#CE2866', '#240F3E', '#333'],
+          dashArray: [0, 0, 0, 0],
+          colors: ['#CE2866', '#240F3E', '#333', '#A9A9A9'],
         },
         title: {
           text: '',

@@ -1,46 +1,73 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 
 const rockets = require('../../dummydata/rockets');
 
-//Function to assign the needed data to arrays to use in graphs
-function getRocketSuccessRate() {
+export const FalconHeavy = () => {
 
-  var falconHeavySuccessRates = [];
+  const [loading, setLoading] = useState(true);
+  const [chartData, setChartData] = useState(chartConf)
 
-  var rocketNameThree = "";
+  useEffect(() => {
 
-  var rocketData = rockets.rockets;
+    fetch("https://api.spacexdata.com/v3/rockets/falcon12", {
+            method: 'POST',
+            mode: 'cors', 
+            cache: 'no-cache', 
+            credentials: 'same-origin', 
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            redirect: 'follow', 
+            referrerPolicy: 'no-referrer', 
+            })
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                const updatedData = {
+                  ...chartConf,
+                  series: [
+                    data.map(rockets => rockets.success_rate_pct)
+                  ], 
+                  options: {
+                    labels: data.map(rockets => rockets.rocket_name)
+                  }
+                } 
+                setChartData(updatedData)
+                //setLoading(false);
 
-  for (let i = 0; i < rocketData.length; i++) {
+            })
+            .catch(error => {
+                console.log(`Fetch Failed ${error}`);
+                const updatedData = {
+                  ...chartConf,
+                  series: [
+                    rockets.rockets.map(rockets => rockets.success_rate_pct)
+                  ], 
+                  options: {
+                    labels: rockets.rockets.map(rockets => rockets.rocket_name)
+                  }
+                }
+                setChartData(updatedData)
+            });
+  }, [])
 
-    if (rocketData[i].rocket_name === "Falcon Heavy") {
-
-      falconHeavySuccessRates.push(rocketData[i].success_rate_pct);
-      rocketNameThree = rocketData[i].rocket_name;
-      
-    } else {
-
-      //console.log("Rocket data does not exist");
-
-    }
-
-  }
-
-  return [falconHeavySuccessRates, rocketNameThree];
-
+  return (
+    <div id="chart" className="falcon-one">
+        <ReactApexChart options={chartData.options} series={chartData.series} type="radialBar" height={250} />
+    </div>
+  );
 }
 
-//Getting access to the arrays within the getShipData() function
-const [falconHeavySuccessRates, rocketNameThree] = getRocketSuccessRate();
 
-class FalconHeavy extends React.Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-    
-      series: falconHeavySuccessRates,
+//{loading ? "Loading..." : ""}
+
+const chartConf = {
+
+      series: [],
       options: {
         chart: {
           height: 350,
@@ -128,21 +155,7 @@ class FalconHeavy extends React.Component {
         stroke: {
           lineCap: 'round'
         },
-        labels: [rocketNameThree],
+        labels: [],
       },
-    
-    
-    };
-  }
 
-    render() {
-        return (
-            <div id="chart" className="">
-                <ReactApexChart options={this.state.options} series={this.state.series} type="radialBar" height={250} />
-            </div>
-        );
-
-    }
 }
-
-export default FalconHeavy;

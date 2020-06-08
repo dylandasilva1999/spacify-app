@@ -1,5 +1,5 @@
 .logo {
-  font-family: 'pacificoregular';
+  font-family: 'Pacifico', cursive;
 }
 /*
 .Launches {
@@ -10,10 +10,55 @@
 */
 
 .padding-app-drawer {
-  width: 100%;
-  height: 330px;
+  width: 73%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding-bottom: 40px;
 }
 
+.top-bar {
+  width: 100%;
+  height: 90%;
+  border-radius: 20px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #240F3E;
+}
+
+.top-bar h1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  float: left;
+  margin-left: 0%;
+  margin-top: 40px;
+  color: #fff;
+  font-size: 50px;
+}
+
+.illustration {
+  background-color: #CE2866;
+  float: right;
+  width: 60%;
+  height: 100%;
+  position: sticky;
+  background-image: url("./images/illustration.svg"), url("https://undraw.co/illustrations");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 160px 20px 20px 0px;
+}
+
+.icon {
+  width: 7%;
+  height: 50%;
+  background-image: url("./images/logo.svg");
+  float: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 38px;
+  margin-left: 3%;
+}
 
 .ProfileName h2{
   font-size: 16px;
@@ -113,31 +158,65 @@
 }
 
 .logo-missions {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #CE2866;
   float: right;
-  margin-right: 5%;
+  margin-right: 8%;
+  margin-top: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./images//total-missions.svg");
 }
 
 .mission-info-container {
   width: 60%;
   margin-left: 5%;
+  margin-top: 15px;
+}
+
+.mission-info-container h3 {
+  font-family: "proxima_novaregular";
+  color: #333;
+}
+
+.mission-info-container h1 {
+  font-family: "proxima_novabold";
+  color: #240F3E;
 }
 
 .logo-launch {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #CE2866;
   float: right;
-  margin-right: 5%;
+  margin-right: 8%;
+  margin-top: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./images//total-launches.svg");
 }
 
 .launch-info-container {
-  width: 60%;
+  width: 80%;
   margin-left: 5%;
+  margin-top: 15px;
+}
+
+.launch-info-container h3 {
+  font-family: "proxima_novaregular";
+  color: #333;
+}
+
+.launch-info-container h1 {
+  font-family: "proxima_novabold";
+  color: #240F3E;
+}
+
+#launch-info-container {
+  width: 100px;
 }
 
 .success-rate-container {
@@ -151,4 +230,49 @@
 
 .falcon-one {
   height: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .top-bar{
+    display: none;
+  }
+  .launch-info-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .mission-info-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .landpad-graph {
+    margin-top: 60px;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .top-bar{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .top-bar{
+    display: none;
+  }
+  .landpad-graph {
+    margin-top: 40px;
+  }
+  .padding-app-drawer {
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .top-bar{
+    display: none;
+  }
+  .padding-app-drawer {
+    height: 20px;
+  }
 }

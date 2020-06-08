@@ -3,30 +3,9 @@ import ReactApexChart from "react-apexcharts";
 
 const ships = require('../../dummydata/ships');
 
-//Function to assign the needed data to arrays to use in graphs
-// function getShipData(buildYear, weight, name) {
-
-//   var shipWeight = [];
-//   var shipName = [];
-
-//   var shipData = ships;
-
-//   for (let i = 0; i < shipData.length; i++) {
-
-//     shipWeight.push(shipData[i].weight_kg);
-//     shipName.push(shipData[i].ship_name);
-
-//   }
-
-//   return [shipWeight, shipName];
-
-// }
-
-//Getting access to the arrays within the getShipData() function
-// const [shipWeight, shipName] = getShipData();
-
 export const ColumnChart = () => {
 
+  const [loading, setLoading] = useState(true);
   const [chartData, setChartData] = useState(chartConf)
 
   useEffect(() => {
@@ -65,8 +44,7 @@ export const ColumnChart = () => {
                 }
                 
                 setChartData(updatedData)
-                // setLaunchesShips(data);
-                // setLoading(false);
+                //setLoading(false);
             })
             .catch(error => {
                 console.log(`Fetch Failed ${error}`);
@@ -89,9 +67,6 @@ export const ColumnChart = () => {
                 
                 setChartData(updatedData)
             });
-
-    
-
   }, [])
 
   return (
@@ -101,7 +76,7 @@ export const ColumnChart = () => {
   );
 }
 
-// export default ColumnChart;
+//{loading ? "Loading..." : ""}
 
 const chartConf = {
     
@@ -196,4 +171,4 @@ const chartConf = {
   },
 
 
-};
+}
