@@ -10,7 +10,7 @@ export const FalconOne = () => {
 
   useEffect(() => {
 
-    fetch("https://api.spacexdata.com/v3/rockets/falcon12", {
+    fetch("https://api.spacexdata.com/v3/rockets/falcon1", {
             method: 'POST',
             mode: 'cors', 
             cache: 'no-cache', 
@@ -25,33 +25,28 @@ export const FalconOne = () => {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
                 const updatedData = {
                   ...chartConf,
                   series: [
-                    data.map(rockets => rockets.success_rate_pct)
+                    data.success_rate_pct
                   ], 
                   options: {
-                    labels: data.map(rockets => rockets.rocket_name)
+                    labels: [data.rocket_name]
                   }
                 } 
                 setChartData(updatedData)
-                //setLoading(false);
-
             })
             .catch(error => {
-                console.log(`Fetch Failed ${error}`);
                 const updatedData = {
                   ...chartConf,
                   series: [
-                    rockets.rockets.map(rockets => rockets.success_rate_pct)
+                    rockets.rockets.success_rate_pct
                   ], 
                   options: {
-                    labels: rockets.rockets.map(rockets => rockets.rocket_name)
+                    labels: [rockets.rockets.rocket_name]
                   }
                 }
                 setChartData(updatedData)
- 
             });
   }, [])
 
@@ -61,8 +56,6 @@ export const FalconOne = () => {
     </div>
   );
 }
-
-//{loading ? "Loading..." : ""}
 
 const chartConf = {
 

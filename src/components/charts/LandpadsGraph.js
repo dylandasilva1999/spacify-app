@@ -168,7 +168,7 @@ const chartConf = {
             show: false,
           },
           title: {
-            text: "Landing Pads Attempted vs Successful Landings",
+            text: "Attempted vs Successful Landings",
             align: 'center',
             margin: 10,
             offsetX: 0,

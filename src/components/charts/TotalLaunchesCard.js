@@ -3,20 +3,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core/styles';
 
-
-const launches = require('../../dummydata/launches');
-
-//Function to get total launches
-function getTotalLaunches() {
-
-  var totalLaunches = launches.launches.length;
-
-  return totalLaunches;
-
-}
-
-//Getting access to totalLaunches variable in getTotalLaunches()
-let totalLaunches = getTotalLaunches();
+const launch = require('../../dummydata/launches');
 
 const useStyles = makeStyles({
   root: {
@@ -38,12 +25,12 @@ const useStyles = makeStyles({
 export const TotalLaunches = () => {
 
   const [loading, setLoading] = useState(true);
-  const [cardData, setCardData] = useState([]);
+  const [launches, setLaunches] = useState(0);
   const classes = useStyles();
 
   useEffect(() => {
 
-    fetch("https://api.spacexdata.com/v3/launches", {
+    fetch("https://api.spacexdata.com/v3/launches1", {
             method: 'POST',
             mode: 'cors', 
             cache: 'no-cache', 
@@ -58,18 +45,11 @@ export const TotalLaunches = () => {
                 return response.json();
             })
             .then(data => {
-                //console.log(data);
-                
-
-                setCardData(data)
+                setLaunches(data.length);
                 setLoading(false);
             })
             .catch(error => {
-                console.log(`Fetch Failed ${error}`);
-      
-                
-                //setCardData(data)
-                setLoading(false);
+                setLaunches(launch.launches.length);
             });
   }, [])
 
@@ -79,9 +59,9 @@ export const TotalLaunches = () => {
         <div className="logo-launch"></div>
         <div className="launch-info-container">
           <h3>Total Launches</h3>
-          <h1 id="launches">{totalLaunches}</h1>
+          <h1 id="launches">{launches}</h1>
         </div>
       </CardContent>
-  </Card>
+    </Card>
   );
 }

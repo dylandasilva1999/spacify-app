@@ -1,13 +1,6 @@
 .logo {
   font-family: 'Pacifico', cursive;
 }
-/*
-.Launches {
-  background-color: lightgray;
-  width: 50%;
-  height: 50vh;
-}
-*/
 
 .padding-app-drawer {
   width: 73%;
@@ -15,10 +8,6 @@
   margin: 0 auto;
   margin-top: 120px;
   padding-bottom: 40px;
-}
-
-.graphs-container {
-
 }
 
 .top-bar {
@@ -281,5 +270,8 @@
   }
   .padding-app-drawer {
     height: 20px;
+  }
+  .landpad-graph {
+    margin-top: 80px;
   }
 }
