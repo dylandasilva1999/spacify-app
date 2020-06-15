@@ -363,7 +363,20 @@ button.learn-more:hover, button.learn-more:focus, button.learn-more:active {
     width: 40%;
   }
   #button-container {
-    margin-top: 32vh;
+    margin-top: 35vh;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .top-bar{
+    display: none;
+  }
+  #information-paragraph {
+    margin-top: 12vh;
+    width: 80%;
+  }
+  #button-container {
+    margin-top: 42vh;
   }
 }
 

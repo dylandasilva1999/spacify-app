@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
   },
   drawer: {
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('xl')]: {
       width: drawerWidth,
       flexShrink: 0,
     },
@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('xl')]: {
       display: 'none',
     },
   },
@@ -152,7 +152,7 @@ return (
             {drawer}
           </Drawer>
         </Hidden>
-        <Hidden xsDown implementation="css">
+        <Hidden lgDown implementation="css">
           <Drawer
             className={classes.drawer}
             variant="permanent"
