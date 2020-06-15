@@ -68,6 +68,19 @@ const chartConf = {
             show: false
           }
         },
+        title: {
+          text: "Launch Success",
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: true,
+          style: {
+            fontSize:  '18px',
+            fontFamily:  "proxima_novabold",
+            color:  '#263238'
+          },
+        },
         plotOptions: {
           radialBar: {
             startAngle: -135,
