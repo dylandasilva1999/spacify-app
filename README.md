@@ -1,3 +1,11 @@
+![](./src/images/Header-01.jpg)
+
+# Spacify React Dashboard
+
+Spacify is a interactive, graphical react application, based on the SpaceX API.
+
+## Available Scripts
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
