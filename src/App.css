@@ -278,6 +278,11 @@
   margin-left: 10px;
 }
 
+/*
+Button hover effect by Katherine Kato
+https://codepen.io/kathykato/pen/KrBZro
+*/
+
 button {
   position: relative;
   display: inline-block;
