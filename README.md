@@ -15,20 +15,20 @@ Spacify is a interactive, graphical react application, based on the SpaceX API. 
 
 ## App Screenshots
 
-Here is a mockup of Spacify <br>
-![](./src/images/Responsive Mockup.png)
+### Here is a **mockup** of Spacify <br>
+![](./src/images/Responsive-mockup.png)
 
-Here is the Desktop View <br>
-![](./src/images/Desktop View.jpg)
+### Here is the **Desktop** View <br>
+![](./src/images/desktop-view.jpg)
 
-Here is the iPhone X View <br>
-![](./src/images/iPhone X View.jpg)
+### Here is the **iPhone X** View <br>
+![](./src/images/iPhoneX-view.jpg)
 
-Here is the iPad View <br>
-![](./src/images/iPad View.jpg)
+### Here is the **iPad** View <br>
+![](./src/images/iPad-view.jpg)
 
-Here is the mobile navigation view <br>
-![](./src/images/Mobile Navigation View.jpg)
+### Here is the mobile navigation view <br>
+![](./src/images/Mobile-navigation-view.jpg)
 
 ## Technologies
 
