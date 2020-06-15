@@ -10,6 +10,7 @@ import {TotalMissions} from './components/charts/TotalMissionsCard';
 import {FalconOne} from './components/charts/LaunchSuccessRateLeft';
 import {FalconNine} from './components/charts/LaunchSuccessRateMiddle';
 import {FalconHeavy} from './components/charts/LaunchSuccessRateRight';
+import {News} from './components/news/News';
 
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -107,7 +108,7 @@ function App() {
 
           <Grid item xs={12} xl={6}>
 
-            
+            <News />
 
           </Grid>
 
