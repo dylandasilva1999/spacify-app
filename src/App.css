@@ -367,16 +367,29 @@ button.learn-more:hover, button.learn-more:focus, button.learn-more:active {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 414px) {
   .top-bar{
     display: none;
   }
   #information-paragraph {
-    margin-top: 12vh;
+    margin-top: 14vh;
     width: 80%;
   }
   #button-container {
-    margin-top: 42vh;
+    margin-top: 45vh;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .top-bar{
+    display: none;
+  }
+  #information-paragraph {
+    margin-top: 18vh;
+    width: 80%;
+  }
+  #button-container {
+    margin-top: 58vh;
   }
 }
 
@@ -397,6 +410,19 @@ button.learn-more:hover, button.learn-more:focus, button.learn-more:active {
   }
   .padding-app-drawer {
     margin-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 1023px) {
+  .top-bar{
+    display: none;
+  }
+  #information-paragraph {
+    margin-top: 8vh;
+    width: 40%;
+  }
+  #button-container {
+    margin-top: 24vh;
   }
 }
 
