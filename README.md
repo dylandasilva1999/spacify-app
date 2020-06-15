@@ -1,18 +1,59 @@
 ![](./src/images/Header-01.jpg)
 
+![GitHub repo size](https://img.shields.io/github/repo-size/dylandasilva1999/spacify-app?color=%23CE2866)
+![GitHub watchers](https://img.shields.io/github/watchers/dylandasilva1999/spacify-app?color=%23CE2866)
+![GitHub issues](https://img.shields.io/github/issues/dylandasilva1999/spacify-app)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/dylandasilva1999/spacify-app)
+![GitHub language count](https://img.shields.io/github/languages/count/dylandasilva1999/spacify-app?color=%23CE2866)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dylandasilva1999/spacify-app?color=%23CE2866)
+
 # Spacify React Dashboard
 
-Spacify is a interactive, graphical react application, based on the SpaceX API.
+Spacify is a interactive, graphical react application, based on the SpaceX API. This application is a fan page for any SpaceX enthusiast, who wants to view data in a graphical format about all the SpaceX missions and launches!
 
-## Available Scripts
+**This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## App Screenshots
+
+Here is a mockup of Spacify <br>
+![](./src/images/Responsive Mockup.png)
+
+Here is the Desktop View <br>
+![](./src/images/Desktop View.jpg)
+
+Here is the iPhone X View <br>
+![](./src/images/iPhone X View.jpg)
+
+Here is the iPad View <br>
+![](./src/images/iPad View.jpg)
+
+Here is the mobile navigation view <br>
+![](./src/images/Mobile Navigation View.jpg)
+
+## Technologies
+
+The technologies used in this project are:
+* HTML
+* CSS
+* JavaScript
+* ReactJS
+* Apex Charts
+* Fetch
+* Material UI
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm install`
+Then you run:
+### `npm start`
+
+If you have yarn installed:
 ### `yarn start`
+
+If yarn is not installed:
+### `npm i yarn`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -50,27 +91,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
