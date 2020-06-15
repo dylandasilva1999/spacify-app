@@ -412,5 +412,14 @@ button.learn-more:hover, button.learn-more:focus, button.learn-more:active {
   }
 }
 
+.MuiListItemIcon-root {
+  padding: 8px;
+  color: #CE2866;
+}
+
+.MuiMenuItem-root {
+  font-family: "proxima_novaregular";
+}
+
 
 

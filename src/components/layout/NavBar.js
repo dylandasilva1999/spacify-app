@@ -23,6 +23,14 @@ import PhonelinkLockIcon from '@material-ui/icons/PhonelinkLock';
 import HelpIcon from '@material-ui/icons/Help';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import PeopleIcon from '@material-ui/icons/People';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
+import Button from '@material-ui/core/Button';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Link
+} from "react-router-dom";
 //import Grid from '@material-ui/core/Grid';
 
 const drawerWidth = 260;
@@ -30,12 +38,16 @@ const drawerWidth = 260;
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    selected: false,
   },
   drawer: {
     [theme.breakpoints.up('xl')]: {
       width: drawerWidth,
       flexShrink: 0,
     },
+  },
+  ListItemIcon: {
+    padding: '15px',
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -82,31 +94,41 @@ const drawer = (
         </div>
         <br></br>
         <Divider />
-        <List>
-            {['Dashboard', 'Users', 'Authentication', 'SpaceX'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index === 0 ? 
-                <DashboardIcon /> 
-                :index === 1 ? <PeopleIcon /> 
-                :index === 2 ? <PhonelinkLockIcon />
-                :<ExploreIcon />}</ListItemIcon>
-                
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {['Account', 'FAQ', 'Settings'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index === 0 ? 
-                <AccountCircleIcon /> 
-                :index === 1 ? <HelpIcon /> 
-                :<SettingsIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
+        <Router>
+          <Switch>
+            <MenuList>
+              <MenuItem component={Link} to="/">
+              <ListItemIcon>{<DashboardIcon />}</ListItemIcon>
+                Dashboard
+              </MenuItem>
+              <MenuItem component={Link} to="/users">
+              <ListItemIcon>{<PeopleIcon />}</ListItemIcon>
+                Users 
+              </MenuItem>
+              <MenuItem component={Link} to="/authentication">
+              <ListItemIcon>{<PhonelinkLockIcon />}</ListItemIcon>
+                Authentication
+              </MenuItem>
+              <a href="https://www.spacex.com/"><MenuItem>
+              <ListItemIcon>{<ExploreIcon />}</ListItemIcon>
+                SpaceX
+              </MenuItem></a>
+              <Divider />
+              <MenuItem component={Link} to="/account">
+              <ListItemIcon>{<AccountCircleIcon />}</ListItemIcon>
+                Account
+              </MenuItem>
+              <MenuItem component={Link} to="/faq">
+              <ListItemIcon>{<HelpIcon />}</ListItemIcon>
+                FAQ
+              </MenuItem>
+              <MenuItem component={Link} to="/settings">
+              <ListItemIcon>{<SettingsIcon />}</ListItemIcon>
+                Settings
+              </MenuItem>
+            </MenuList>
+          </Switch>
+        </Router>
     </div>
   );
 return (
